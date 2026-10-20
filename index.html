@@ -2,11 +2,17 @@
 <html>
 <head>
     <title>projet web pokemon</title>
-    <script src="js/navbar.js" defer></script>
+    <script src="js/navbar.js"></script>
+        <script src="js/script.js"></script>
+
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <h1>voivi mon jeu pokemon</h1>
-    <div id="navbar-container"></div>
+    <header class="site-header">
+        <h1>acceuil</h1>
+        <div id="navbar-container"></div>
+    </header>
+    <button type="button" onclick="loadXMLDoc()">Afficher les questions</button>
+    <div id="data"></div>
 </body>
 </html>  
