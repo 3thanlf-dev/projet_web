@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <question>
+        <id>1</id>
+        <theme>Types</theme>
+        <contenu>En dehors du type Poison, quel est l’autre type de Bulbizarre ?</contenu>
+        <r1>Feu</r1>
+        <r2>Plante</r2>
+        <r3>Eau</r3>
+        <r4>Électrik</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>1</point>
+    </question>
+    <question>
+        <id>2</id>
+        <theme>Types</theme>
+        <contenu>Quel est le type de Pikachu ?</contenu>
+        <r1>Combat</r1>
+        <r2>Eau</r2>
+        <r3>Électrik</r3>
+        <r4>Vol</r4>
+        <bonne_reponse>3</bonne_reponse>
+        <point>2</point>
+    </question>
+    <question>
+        <id>3</id>
+        <theme>Types</theme>
+        <contenu>Quels sont les types de Dracaufeu dans sa forme habituelle ?</contenu>
+        <r1>Feu et Vol</r1>
+        <r2>Feu et Dragon</r2>
+        <r3>Feu et Combat</r3>
+        <r4>Vol et Dragon</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>3</point>
+    </question>
+    <question>
+        <id>4</id>
+        <theme>Types</theme>
+        <contenu>Quels sont les deux types de Léviator ?</contenu>
+        <r1>Eau et Dragon</r1>
+        <r2>Eau et Vol</r2>
+        <r3>Eau et Ténèbres</r3>
+        <r4>Dragon et Vol</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>4</point>
+    </question>
+    <question>
+        <id>5</id>
+        <theme>Types</theme>
+        <contenu>Quel type a été ajouté à la sixième génération et est notamment efficace contre le type Dragon ?</contenu>
+        <r1>Acier</r1>
+        <r2>Fée</r2>
+        <r3>Sol</r3>
+        <r4>Insecte</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>5</point>
+    </question>
+    <question>
+        <id>6</id>
+        <theme>Évolutions</theme>
+        <contenu>En quel Pokémon évolue Magicarpe ?</contenu>
+        <r1>Léviator</r1>
+        <r2>Poissirène</r2>
+        <r3>Lokhlass</r3>
+        <r4>Carapuce</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>1</point>
+    </question>
+    <question>
+        <id>7</id>
+        <theme>Évolutions</theme>
+        <contenu>En quel Pokémon Carapuce évolue-t-il directement ?</contenu>
+        <r1>Tortank</r1>
+        <r2>Carabaffe</r2>
+        <r3>Krabboss</r3>
+        <r4>Flagadoss</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>2</point>
+    </question>
+    <question>
+        <id>8</id>
+        <theme>Évolutions</theme>
+        <contenu>Quel objet faut-il utiliser sur Feuforêve pour le faire évoluer en Magirêve ?</contenu>
+        <r1>Pierre Foudre</r1>
+        <r2>Pierre Nuit</r2>
+        <r3>Pierre Lune</r3>
+        <r4>Pierre Aube</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>3</point>
+    </question>
+    <question>
+        <id>9</id>
+        <theme>Évolutions</theme>
+        <contenu>En quel Pokémon évolue Kadabra lorsqu’il est échangé ?</contenu>
+        <r1>Alakazam</r1>
+        <r2>M. Mime</r2>
+        <r3>Flagadoss</r3>
+        <r4>Mackogneur</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>4</point>
+    </question>
+    <question>
+        <id>10</id>
+        <theme>Évolutions</theme>
+        <contenu>Comment faire évoluer Évoli en Noctali dans les jeux principaux, hors évolution spéciale propre à une région ?</contenu>
+        <r1>Avec une Pierre Feu</r1>
+        <r2>En montant de niveau avec une grande amitié la nuit</r2>
+        <r3>En l’échangeant pendant la journée</r3>
+        <r4>Avec une Pierre Lune</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>5</point>
+    </question>
+    <question>
+        <id>11</id>
+        <theme>Régions et générations</theme>
+        <contenu>Quelle région découvre-t-on dans les premiers jeux Pokémon, Rouge et Bleu ?</contenu>
+        <r1>Johto</r1>
+        <r2>Kanto</r2>
+        <r3>Hoenn</r3>
+        <r4>Sinnoh</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>1</point>
+    </question>
+    <question>
+        <id>12</id>
+        <theme>Régions et générations</theme>
+        <contenu>Quelle région est inspirée de l’île japonaise de Kyūshū ?</contenu>
+        <r1>Johto</r1>
+        <r2>Sinnoh</r2>
+        <r3>Hoenn</r3>
+        <r4>Kalos</r4>
+        <bonne_reponse>3</bonne_reponse>
+        <point>2</point>
+    </question>
+    <question>
+        <id>13</id>
+        <theme>Régions et générations</theme>
+        <contenu>Dans quelle région se déroulent Pokémon Diamant et Perle ?</contenu>
+        <r1>Sinnoh</r1>
+        <r2>Unys</r2>
+        <r3>Alola</r3>
+        <r4>Paldea</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>3</point>
+    </question>
+    <question>
+        <id>14</id>
+        <theme>Régions et générations</theme>
+        <contenu>Quelle région est principalement composée d’îles et apparaît dans Pokémon Soleil et Lune ?</contenu>
+        <r1>Kalos</r1>
+        <r2>Galar</r2>
+        <r3>Alola</r3>
+        <r4>Paldea</r4>
+        <bonne_reponse>3</bonne_reponse>
+        <point>4</point>
+    </question>
+    <question>
+        <id>15</id>
+        <theme>Régions et générations</theme>
+        <contenu>Dans quelle génération la région de Paldea et les jeux Écarlate et Violet ont-ils été introduits ?</contenu>
+        <r1>Huitième</r1>
+        <r2>Neuvième</r2>
+        <r3>Septième</r3>
+        <r4>Dixième</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>5</point>
+    </question>
+    <question>
+        <id>16</id>
+        <theme>Pokédex</theme>
+        <contenu>Quel Pokémon porte le numéro 001 dans le Pokédex national ?</contenu>
+        <r1>Salamèche</r1>
+        <r2>Bulbizarre</r2>
+        <r3>Carapuce</r3>
+        <r4>Pikachu</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>1</point>
+    </question>
+    <question>
+        <id>17</id>
+        <theme>Pokédex</theme>
+        <contenu>Quel est le numéro national de Pikachu ?</contenu>
+        <r1>25</r1>
+        <r2>26</r2>
+        <r3>10</r3>
+        <r4>151</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>2</point>
+    </question>
+    <question>
+        <id>18</id>
+        <theme>Pokédex</theme>
+        <contenu>Quel Pokémon possède le numéro national 133 ?</contenu>
+        <r1>Ronflex</r1>
+        <r2>Évoli</r2>
+        <r3>Aquali</r3>
+        <r4>Métamorph</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>3</point>
+    </question>
+    <question>
+        <id>19</id>
+        <theme>Pokédex</theme>
+        <contenu>Quel Pokémon porte le numéro 150 dans le Pokédex national ?</contenu>
+        <r1>Dracaufeu</r1>
+        <r2>Mew</r2>
+        <r3>Mewtwo</r3>
+        <r4>Artikodin</r4>
+        <bonne_reponse>3</bonne_reponse>
+        <point>4</point>
+    </question>
+    <question>
+        <id>20</id>
+        <theme>Pokédex</theme>
+        <contenu>Quel est le numéro national de Métamorph ?</contenu>
+        <r1>132</r1>
+        <r2>133</r2>
+        <r3>151</r3>
+        <r4>144</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>5</point>
+    </question>
+    <question>
+        <id>21</id>
+        <theme>Objets et combats</theme>
+        <contenu>Quel objet sert principalement à capturer un Pokémon sauvage ?</contenu>
+        <r1>Une Potion</r1>
+        <r2>Une Poké Ball</r2>
+        <r3>Une Corde Sortie</r3>
+        <r4>Un Rappel</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>1</point>
+    </question>
+    <question>
+        <id>22</id>
+        <theme>Objets et combats</theme>
+        <contenu>Quel objet soigne l’empoisonnement d’un Pokémon ?</contenu>
+        <r1>Antidote</r1>
+        <r2>Huile</r2>
+        <r3>Rappel</r3>
+        <r4>Poképoupée</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>2</point>
+    </question>
+    <question>
+        <id>23</id>
+        <theme>Objets et combats</theme>
+        <contenu>Quelle attaque est super efficace contre un Pokémon de type Plante ?</contenu>
+        <r1>Pistolet à O</r1>
+        <r2>Tranch’Herbe</r2>
+        <r3>Lance-Flammes</r3>
+        <r4>Tonnerre</r4>
+        <bonne_reponse>3</bonne_reponse>
+        <point>3</point>
+    </question>
+    <question>
+        <id>24</id>
+        <theme>Objets et combats</theme>
+        <contenu>Quel objet permet de garantir la capture d’un Pokémon sauvage lorsqu’il est utilisé ?</contenu>
+        <r1>Super Ball</r1>
+        <r2>Filet Ball</r2>
+        <r3>Master Ball</r3>
+        <r4>Honor Ball</r4>
+        <bonne_reponse>3</bonne_reponse>
+        <point>4</point>
+    </question>
+    <question>
+        <id>25</id>
+        <theme>Objets et combats</theme>
+        <contenu>Dans le tableau des types standard, quel type est immunisé aux attaques de type Sol ?</contenu>
+        <r1>Vol</r1>
+        <r2>Roche</r2>
+        <r3>Poison</r3>
+        <r4>Acier</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>5</point>
+    </question>
+    <question>
+        <id>26</id>
+        <theme>Dessin animé</theme>
+        <contenu>Quel Pokémon accompagne Sacha dès le début de son aventure dans le dessin animé ?</contenu>
+        <r1>Carapuce</r1>
+        <r2>Pikachu</r2>
+        <r3>Rondoudou</r3>
+        <r4>Salamèche</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>1</point>
+    </question>
+    <question>
+        <id>27</id>
+        <theme>Dessin animé</theme>
+        <contenu>Comment s’appelle le trio emblématique de la Team Rocket qui poursuit souvent Sacha ?</contenu>
+        <r1>Jessie, James et Miaouss</r1>
+        <r2>Giovanni, Ondine et Pierre</r2>
+        <r3>Jessie, Régis et Pikachu</r3>
+        <r4>James, Pierre et Togepi</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>2</point>
+    </question>
+    <question>
+        <id>28</id>
+        <theme>Dessin animé</theme>
+        <contenu>Quel Pokémon de Sacha refuse souvent de rester dans sa Poké Ball ?</contenu>
+        <r1>Ronflex</r1>
+        <r2>Dracaufeu</r2>
+        <r3>Pikachu</r3>
+        <r4>Bulbizarre</r4>
+        <bonne_reponse>3</bonne_reponse>
+        <point>3</point>
+    </question>
+    <question>
+        <id>29</id>
+        <theme>Dessin animé</theme>
+        <contenu>Quel est le titre du premier long métrage Pokémon sorti au cinéma ?</contenu>
+        <r1>Le pouvoir est en toi</r1>
+        <r2>Mewtwo contre-attaque</r2>
+        <r3>La destinée de Deoxys</r3>
+        <r4>Lucario et le mystère de Mew</r4>
+        <bonne_reponse>2</bonne_reponse>
+        <point>4</point>
+    </question>
+    <question>
+        <id>30</id>
+        <theme>Dessin animé</theme>
+        <contenu>Dans quel épisode du dessin animé Sacha obtient-il Salamèche, avant son évolution en Dracaufeu ?</contenu>
+        <r1>Le Pokémon abandonné</r1>
+        <r2>Le village des Pikachu</r2>
+        <r3>La guerre des Poké Balls</r3>
+        <r4>Le secret du centre d’élevage</r4>
+        <bonne_reponse>1</bonne_reponse>
+        <point>5</point>
+    </question>
+</data>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Détail de la question - Pokémon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/navbar.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="detail">
+    <header class="site-header">
+        <h1>DÉTAIL DE LA QUESTION</h1>
+        <div id="navbar-container"></div>
+    </header>
+
+    <main class="page-content">
+        <p id="question-status" class="status-message" role="status" aria-live="polite">Chargement de la question…</p>
+        <article id="question-detail" class="question-card" hidden>
+            <h2 id="question-title"></h2>
+            <p id="question-theme"></p>
+            <h3>Propositions</h3>
+            <ol id="question-answers"></ol>
+            <p id="question-points" class="points"></p>
+        </article>
+        <p><a class="back-link" href="apprendre.html">← Retour aux questions</a></p>
+    </main>
+</body>
+</html>
