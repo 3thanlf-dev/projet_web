@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li><a href="apprendre.html">apprendre</a></li>
                 <li><a href="jeu.html">jeu</a></li>
                 <li><a href="statistique.html">statistique</a></li>
+                <li><a href="cartes.html">cartes</a></li>
             </ul>
         </nav>
     `;

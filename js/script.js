@@ -156,3 +156,32 @@
     /*********************************************************
      * FIN EXO3
      *********************************************************/
+
+    /*********************************************************
+     * EXO4
+     *********************************************************/
+    // Exo4 : exécutée au chargement de cartes.html (seulement si #cartes existe).
+    // Lit data/bdd_cartes.xml et crée une carte HTML pour chaque <carte> du fichier.
+    document.addEventListener("DOMContentLoaded", () => {
+        const cartes = document.getElementById("cartes");
+        if (!cartes) return;
+
+        fetch("data/bdd_cartes.xml").then(r => r.text()).then(texte => {
+            const xml = new DOMParser().parseFromString(texte, "text/xml");
+            for (const carte of xml.querySelectorAll("carte")) {
+                // Raccourci : donne le texte d'une balise de la carte (ex : get("nom") -> "Bulbizarre")
+                const get = balise => carte.querySelector(balise).textContent;
+                cartes.innerHTML += `
+                    <div class="carte type-${get("type")}">
+                        <div class="entete"><span>${get("nom")}</span><span>PV ${get("pv")}</span></div>
+                        <div class="image"><img src="${get("image")}" alt="${get("nom")}"></div>
+                        <div class="attaque"><span>${get("attaque")}</span><span>${get("degats")}</span></div>
+                        <div class="pied">Faiblesse : ${get("faiblesse")} | Retraite : ${get("retraite")}</div>
+                        <div class="infos">N° ${get("numero")} - ${get("rarete")}</div>
+                    </div>`;
+            }
+        });
+    });
+    /*********************************************************
+     * FIN EXO4
+     *********************************************************/

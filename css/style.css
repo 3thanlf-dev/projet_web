@@ -37,3 +37,43 @@ h1 {
     text-align: center;
     margin-top: 20px;
 }
+
+/* Exo4 */
+.cartes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+.carte {
+    width: 220px;
+    border: 6px solid #333;
+    border-radius: 12px;
+    background-color: #fff8e7;
+    padding: 8px;
+    font-size: 14px;
+}
+.carte .entete,
+.carte .attaque {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.carte .image {
+    height: 140px;
+    margin: 6px 0;
+    background-color: #fff;
+}
+.carte .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.carte .pied,
+.carte .infos {
+    font-size: 12px;
+}
+.type-Plante { border-color: #4caf50; }
+.type-Feu { border-color: #f44336; }
+.type-Eau { border-color: #2196f3; }
+/* Fin Exo4 */

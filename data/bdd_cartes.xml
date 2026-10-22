@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Exo4 : chaque carte contient 9 informations -->
+<cartes>
+    <carte>
+        <numero>001</numero>
+        <nom>Bulbizarre</nom>
+        <image>img/Bulbizarre.jpg</image>
+        <type>Plante</type>
+        <pv>70</pv>
+        <attaque>Fouet Lianes</attaque>
+        <degats>30</degats>
+        <faiblesse>Feu</faiblesse>
+        <retraite>1</retraite>
+        <rarete>Commune</rarete>
+    </carte>
+    <carte>
+        <numero>004</numero>
+        <nom>Salamèche</nom>
+        <image>img/Salamèche.jpg</image>
+        <type>Feu</type>
+        <pv>60</pv>
+        <attaque>Flammèche</attaque>
+        <degats>30</degats>
+        <faiblesse>Eau</faiblesse>
+        <retraite>1</retraite>
+        <rarete>Commune</rarete>
+    </carte>
+    <carte>
+        <numero>007</numero>
+        <nom>Carapuce</nom>
+        <image>img/Carapuce.jpg</image>
+        <type>Eau</type>
+        <pv>60</pv>
+        <attaque>Pistolet à eau</attaque>
+        <degats>20</degats>
+        <faiblesse>Électrik</faiblesse>
+        <retraite>1</retraite>
+        <rarete>Commune</rarete>
+    </carte>
+</cartes>
