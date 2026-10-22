@@ -9,8 +9,6 @@
         xmlhttp.send();
     }
 
-    
-
     // Appelée automatiquement par xmlhttp à chaque changement d'état du téléchargement.
     // Quand le fichier est entièrement reçu (readyState 4, status 200), elle remplit les filtres puis le tableau.
     function loadData() {
@@ -19,17 +17,6 @@
             displayDataTable();
             
         }
-    }
-
-    // Appelée par loadData(). Ajoute dans la liste déroulante #thematique (apprendre.html)
-    // une option par thématique trouvée dans le XML, sans doublon.
-    function loadFilters(){
-        const xmlDoc = xmlhttp.responseXML;
-            const select = document.getElementById("thematique");
-            if (select) {
-                const themes = [...new Set([...xmlDoc.getElementsByTagName("thematique")].map(theme => theme.textContent))];
-                themes.forEach(theme => select.add(new Option(theme, theme)));
-            }
     }
 
     // Appelée par loadData(). Construit un tableau HTML avec toutes les questions du XML
@@ -68,6 +55,21 @@
         }
         
         document.getElementById("data").innerHTML = table + "</table>";
+    }
+
+    /*********************************************************
+     * EXO2
+     *********************************************************/
+
+   // Appelée par loadData(). Ajoute dans la liste déroulante #thematique (apprendre.html)
+    // une option par thématique trouvée dans le XML, sans doublon.
+    function loadFilters(){
+        const xmlDoc = xmlhttp.responseXML;
+            const select = document.getElementById("thematique");
+            if (select) {
+                const themes = [...new Set([...xmlDoc.getElementsByTagName("thematique")].map(theme => theme.textContent))];
+                themes.forEach(theme => select.add(new Option(theme, theme)));
+            }
     }
 
     // Appelée par le bouton "Filtrer" (apprendre.html). Reconstruit le tableau en ne gardant
@@ -110,6 +112,10 @@
         document.getElementById("data").innerHTML = table;
     
     }
+    /*********************************************************
+     * FIN EXO2
+     *********************************************************/
+
 
     /*********************************************************
      * EXO3
