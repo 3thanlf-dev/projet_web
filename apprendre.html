@@ -7,11 +7,17 @@
     <script src="js/navbar.js" defer></script>
     <script src="js/script.js" defer></script>
 </head>
-<body >
+<body onload="loadXMLDoc()">
     <header class="site-header">
-        <h1>APPRENDRE</h1>
+        <h1>Apprendre</h1>
         <div id="navbar-container"></div>
     </header>
+    <select id="thematique" class="form-select">
+        <option value="Tout">Tout</option>
+    </select>
+    <input type="button" onclick="filterDataTable()" value="Filtrer" class="btn-primary"/>
+    <table id="data" class="table"></table>
+
     
 </body>
 </html>
