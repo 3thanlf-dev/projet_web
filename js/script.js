@@ -1,5 +1,8 @@
-   let xmlhttp = new XMLHttpRequest();
+    // Objet unique qui sert à charger data/bdd.xml et garde le document XML reçu (xmlhttp.responseXML).
+    let xmlhttp = new XMLHttpRequest();
 
+    // Appelée par le bouton "Afficher les questions" (index.html, apprendre.html).
+    // Lance le téléchargement de bdd.xml ; quand il est prêt, loadData() est exécutée.
     function loadXMLDoc() {
         xmlhttp.onreadystatechange = loadData;
         xmlhttp.open("GET", "data/bdd.xml", true);
@@ -8,6 +11,8 @@
 
     
 
+    // Appelée automatiquement par xmlhttp à chaque changement d'état du téléchargement.
+    // Quand le fichier est entièrement reçu (readyState 4, status 200), elle remplit les filtres puis le tableau.
     function loadData() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {  
             loadFilters();
@@ -16,6 +21,8 @@
         }
     }
 
+    // Appelée par loadData(). Ajoute dans la liste déroulante #thematique (apprendre.html)
+    // une option par thématique trouvée dans le XML, sans doublon.
     function loadFilters(){
         const xmlDoc = xmlhttp.responseXML;
             const select = document.getElementById("thematique");
@@ -25,6 +32,8 @@
             }
     }
 
+    // Appelée par loadData(). Construit un tableau HTML avec toutes les questions du XML
+    // (ID, thème, question, 4 réponses, bonne réponse, points) et l'affiche dans #data.
     function displayDataTable() {
         let i;
         let xmlDoc = xmlhttp.responseXML;    
@@ -65,6 +74,41 @@
 
 
 
+    // Exécutée au chargement de index.html (seulement si #lots existe).
+    // Crée un bouton "Lot N" par tranche de 10 questions (calculé depuis bdd.xml) et un bouton par thématique,
+    // chacun menant à jeu.html avec ?lot=N ou ?theme=...
+    document.addEventListener("DOMContentLoaded", () => {
+        const lots = document.getElementById("lots");
+        if (!lots) return;
+
+        const themes = ["Types", "Évolutions", "Régions et générations", "Pokédex", "Objets et combats", "Dessin animé"];
+
+        fetch("data/bdd.xml").then(r => r.text()).then(xml => {
+            const nbLots = Math.ceil((xml.match(/<question>/g) || []).length / 10);
+            for (let i = 1; i <= nbLots; i++) {
+                lots.innerHTML += `<div class="border rounded p-2 m-1 text-nowrap"><a href="jeu.html?lot=${i}">Lot ${i}</a></div>`;
+            }
+        });
+
+        themes.forEach(t => {
+            document.getElementById("themes").innerHTML += `<div class="border rounded p-2 m-1 text-nowrap"><a href="jeu.html?theme=${encodeURIComponent(t)}">${t}</a></div>`;
+        });
+    });
+
+    // Exécutée au chargement de jeu.html (seulement si #choix existe).
+    // Lit le paramètre ?lot= ou ?theme= de l'URL et affiche le choix de l'utilisateur.
+    document.addEventListener("DOMContentLoaded", () => {
+        const choix = document.getElementById("choix");
+        if (!choix) return;
+
+        const params = new URLSearchParams(window.location.search);
+        choix.textContent = params.has("lot")
+            ? "Partie lancée : lot " + params.get("lot")
+            : "Partie lancée : thématique " + params.get("theme");
+    });
+
+    // Appelée par le bouton "Filtrer" (apprendre.html). Reconstruit le tableau en ne gardant
+    // que les questions de la thématique choisie dans #thematique ("Tout" affiche tout).
     function filterDataTable() {
         
         const xmlDoc = xmlhttp.responseXML;
