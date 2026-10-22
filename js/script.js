@@ -70,43 +70,6 @@
         document.getElementById("data").innerHTML = table + "</table>";
     }
 
-
-
-
-
-    // Exécutée au chargement de index.html (seulement si #lots existe).
-    // Crée un bouton "Lot N" par tranche de 10 questions (calculé depuis bdd.xml) et un bouton par thématique,
-    // chacun menant à jeu.html avec ?lot=N ou ?theme=...
-    document.addEventListener("DOMContentLoaded", () => {
-        const lots = document.getElementById("lots");
-        if (!lots) return;
-
-        const themes = ["Types", "Évolutions", "Régions et générations", "Pokédex", "Objets et combats", "Dessin animé"];
-
-        fetch("data/bdd.xml").then(r => r.text()).then(xml => {
-            const nbLots = Math.ceil((xml.match(/<question>/g) || []).length / 10);
-            for (let i = 1; i <= nbLots; i++) {
-                lots.innerHTML += `<div class="border rounded p-2 m-1 text-nowrap"><a href="jeu.html?lot=${i}">Lot ${i}</a></div>`;
-            }
-        });
-
-        themes.forEach(t => {
-            document.getElementById("themes").innerHTML += `<div class="border rounded p-2 m-1 text-nowrap"><a href="jeu.html?theme=${encodeURIComponent(t)}">${t}</a></div>`;
-        });
-    });
-
-    // Exécutée au chargement de jeu.html (seulement si #choix existe).
-    // Lit le paramètre ?lot= ou ?theme= de l'URL et affiche le choix de l'utilisateur.
-    document.addEventListener("DOMContentLoaded", () => {
-        const choix = document.getElementById("choix");
-        if (!choix) return;
-
-        const params = new URLSearchParams(window.location.search);
-        choix.textContent = params.has("lot")
-            ? "Partie lancée : lot " + params.get("lot")
-            : "Partie lancée : thématique " + params.get("theme");
-    });
-
     // Appelée par le bouton "Filtrer" (apprendre.html). Reconstruit le tableau en ne gardant
     // que les questions de la thématique choisie dans #thematique ("Tout" affiche tout).
     function filterDataTable() {
@@ -147,3 +110,43 @@
         document.getElementById("data").innerHTML = table;
     
     }
+
+    /*********************************************************
+     * EXO3
+     *********************************************************/
+
+    // Exécutée au chargement de index.html (seulement si #lots existe).
+    // Crée un bouton "Lot N" par tranche de 10 questions (calculé depuis bdd.xml) et un bouton par thématique,
+    // chacun menant à jeu.html avec ?lot=N ou ?theme=...
+    document.addEventListener("DOMContentLoaded", () => {
+        const lots = document.getElementById("lots");
+        if (!lots) return;
+
+        const themes = ["Types", "Évolutions", "Régions et générations", "Pokédex", "Objets et combats", "Dessin animé"];
+
+        fetch("data/bdd.xml").then(r => r.text()).then(xml => {
+            const nbLots = Math.ceil((xml.match(/<question>/g) || []).length / 10);
+            for (let i = 1; i <= nbLots; i++) {
+                lots.innerHTML += `<div class="border rounded p-2 m-1 text-nowrap"><a href="jeu.html?lot=${i}">Lot ${i}</a></div>`;
+            }
+        });
+
+        themes.forEach(t => {
+            document.getElementById("themes").innerHTML += `<div class="border rounded p-2 m-1 text-nowrap"><a href="jeu.html?theme=${encodeURIComponent(t)}">${t}</a></div>`;
+        });
+    });
+
+    // Exécutée au chargement de jeu.html (seulement si #choix existe).
+    // Lit le paramètre ?lot= ou ?theme= de l'URL et affiche le choix de l'utilisateur.
+    document.addEventListener("DOMContentLoaded", () => {
+        const choix = document.getElementById("choix");
+        if (!choix) return;
+
+        const params = new URLSearchParams(window.location.search);
+        choix.textContent = params.has("lot")
+            ? "Partie lancée : lot " + params.get("lot")
+            : "Partie lancée : thématique " + params.get("theme");
+    });
+    /*********************************************************
+     * FIN EXO3
+     *********************************************************/
