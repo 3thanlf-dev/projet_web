@@ -120,7 +120,7 @@ h2 {
     padding: 20px;
     border: 2px solid #333;
     border-radius: 12px;
-    background-color: #f97df7;
+    background-color: #87f97d;
     color: #222;
     font-size: 1.1rem;
     font-weight: bold;
@@ -129,7 +129,7 @@ h2 {
 }
 
 .choix-partie:hover {
-    background-color: #f57edd;
+    background-color: #7ef580;
 }
 
 .choix-partie:focus-visible {
@@ -144,7 +144,7 @@ h2 {
     width: 220px;
     border: 6px solid #333;
     border-radius: 12px;
-    background-color: #eb77ed;
+    background-color: #7fed77;
     padding: 8px;
     font-size: 14px;
 }
