@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Exo4 : chaque carte contient 9 informations -->
+<cartes>
+    <carte>
+        <numero>006</numero>
+        <nom>Dracaufeu</nom>
+        <image>images/dracaufeu.png</image>
+        <type>Feu</type>
+        <pv>150</pv>
+        <attaque>Lance-Flammes</attaque>
+        <degats>100</degats>
+        <faiblesse>Eau</faiblesse>
+        <retraite>3</retraite>
+        <rarete>Rare</rarete>
+    </carte>
+    <carte>
+        <numero>150</numero>
+        <nom>Mewtwo</nom>
+        <image>images/meetwo.png</image>
+        <type>Psy</type>
+        <pv>130</pv>
+        <attaque>Psyko</attaque>
+        <degats>90</degats>
+        <faiblesse>Ténèbres</faiblesse>
+        <retraite>2</retraite>
+        <rarete>Rare</rarete>
+    </carte>
+    <carte>
+        <numero>025</numero>
+        <nom>Pikachu</nom>
+        <image>images/images.jpeg</image>
+        <type>Électrik</type>
+        <pv>70</pv>
+        <attaque>Tonnerre</attaque>
+        <degats>60</degats>
+        <faiblesse>Combat</faiblesse>
+        <retraite>1</retraite>
+        <rarete>Commune</rarete>
+    </carte>
+</cartes>

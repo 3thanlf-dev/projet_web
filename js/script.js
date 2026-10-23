@@ -1,4 +1,4 @@
-   let xmlhttp = new XMLHttpRequest();
+    let xmlhttp = new XMLHttpRequest();
 
     function loadXMLDoc() {
         xmlhttp.onreadystatechange = loadData;
@@ -6,7 +6,6 @@
         xmlhttp.send();
     }
 
-    
 
     function loadData() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {  
@@ -16,14 +15,7 @@
         }
     }
 
-    function loadFilters(){
-        const xmlDoc = xmlhttp.responseXML;
-            const select = document.getElementById("thematique");
-            if (select) {
-                const themes = [...new Set([...xmlDoc.getElementsByTagName("thematique")].map(theme => theme.textContent))];
-                themes.forEach(theme => select.add(new Option(theme, theme)));
-            }
-    }
+
 
     function displayDataTable() {
         let i;
@@ -62,8 +54,14 @@
     }
 
 
-
-
+    function loadFilters(){
+        const xmlDoc = xmlhttp.responseXML;
+            const select = document.getElementById("thematique");
+            if (select) {
+                const themes = [...new Set([...xmlDoc.getElementsByTagName("thematique")].map(theme => theme.textContent))];
+                themes.forEach(theme => select.add(new Option(theme, theme)));
+            }
+    }
 
     function filterDataTable() {
         
@@ -103,3 +101,45 @@
         document.getElementById("data").innerHTML = table;
     
     }
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const lots = document.getElementById("lots");
+        if (!lots) return;
+
+        const themes = ["Types","Pokédex",  "Régions et générations", "Dessin animé",  "Objets et combats","Évolutions"];
+
+        fetch("data/bdd.xml").then(r => r.text()).then(xml => {
+            const nbLots = Math.ceil((xml.match(/<question>/g) || []).length / 10);
+            for (let i = 1; i <= nbLots; i++) {
+                lots.innerHTML += `<a class="choix-partie" href="jeu.html?lot=${i}">Lot ${i}</a>`;
+            }
+        });
+
+        themes.forEach(t => {
+            document.getElementById("themes").innerHTML += `<a class="choix-partie" href="jeu.html?theme=${encodeURIComponent(t)}">${t}</a>`;
+        });
+    });
+
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const cartes = document.getElementById("cartes");
+        if (!cartes) return;
+
+        fetch("data/bdd_cartes.xml").then(r => r.text()).then(texte => {
+            const xml = new DOMParser().parseFromString(texte, "text/xml");
+            for (const carte of xml.querySelectorAll("carte")) {
+                // Raccourci : donne le texte d'une balise de la carte (ex : get("nom") -> "Bulbizarre")
+                const get = balise => carte.querySelector(balise).textContent;
+                cartes.innerHTML += `
+                    <div class="carte type-${get("type")}">
+                        <div class="entete"><span>${get("nom")}</span><span>PV ${get("pv")}</span></div>
+                        <div class="image"><img src="${get("image")}" alt="${get("nom")}"></div>
+                        <div class="attaque"><span>${get("attaque")}</span><span>${get("degats")}</span></div>
+                        <div class="pied">Faiblesse : ${get("faiblesse")} | Retraite : ${get("retraite")}</div>
+                        <div class="infos">N° ${get("numero")} - ${get("rarete")}</div>
+                    </div>`;
+            }
+        });
+    });
